@@ -170,7 +170,7 @@ Debajo de la tabla de circuitos, separado por una fila en blanco, aparece un blo
 | Caída de tensión | Porcentaje calculado del tramo de acometida |
 | Canalización | Diámetro del conduit, o un guion si la acometida es aérea |
 
-La designación del empalme se arma con la letra según el tipo de acometida, A para aérea y S para subterránea, y un número que sale del calibre: 6 hasta 30 A, 9 hasta 40 A y 16 por sobre eso. De ahí salen las denominaciones A-9 y S-9 que se usan habitualmente.
+La designación del empalme se arma con la letra según el tipo de acometida, A para aérea y S para subterránea, y un número que sale del calibre: 6 hasta 25 A, 9 hasta 40 A y 16 Hasta 63 A. De ahí salen las denominaciones A-9 y S-9 que se usan habitualmente, donde A = Aéreo y S = Subterráneo.
 
 La potencia nominal se toma de una tabla interna que asocia cada calibre con su potencia en kW: 6 A equivale a 1 kW, 10 A a 2 kW, 16 A a 3 kW, 20 A a 4 kW, 25 A a 5 kW, 30 A a 6 kW, 32 A a 6,5 kW, 35 A a 7 kW, 40 A a 8 kW, 50 A a 10 kW y 63 A a 13 kW.
 
