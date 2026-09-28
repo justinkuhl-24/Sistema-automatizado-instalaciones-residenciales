@@ -667,11 +667,6 @@ def aplicar_base_normativa_e_hipervinculos(writer, materiales_df, sheet_material
                 cell_sello = ws_mat.cell(row=r, column=col_sello)  # celda de la columna Sello SEC
                 cell_sello.alignment = Alignment(horizontal="center", vertical="top")  # centra el valor
 
-# =========================
-# HELPERS (NO BORRAN NADA)
-# =========================
-
-
 # ===== Tabla de diámetros de conduit según sección y N° de conductores (Tabla RIC N°4.17) =====
 def conduit_por_tabla(seccion_mm2, n_cond):
     """
