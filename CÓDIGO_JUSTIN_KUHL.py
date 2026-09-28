@@ -667,21 +667,21 @@ def aplicar_base_normativa_e_hipervinculos(writer, materiales_df, sheet_material
                 cell_sello = ws_mat.cell(row=r, column=col_sello)  # celda de la columna Sello SEC
                 cell_sello.alignment = Alignment(horizontal="center", vertical="top")  # centra el valor
 
-# ===== Tabla de diámetros de conduit según sección y N° de conductores (Tabla RIC N°4.17) =====
+# ===== Tabla de diámetros de conduit según sección y N° de conductores (Tabla RIC N°4, tabla 4.17) =====
 def conduit_por_tabla(seccion_mm2, n_cond):
     """
-    Tabla N°4.17 (H07V-U/R/K, etc.) -> Ø nominal ducto mm según sección y Nº conductores (1..5)
+    Tabla N°4.17 (H07Z1-U/R/K, etc.) -> Ø nominal ducto mm según sección y Nº conductores (1..5)
     Si n_cond > 5, lo limita a 5 (puedes ampliarlo después si quieres).
     """
     # Tabla: sección : {n_cond: ducto_mm}
     tabla = {  # se copia igual que la tabla del ric, para no calcular nada
         1.5: {1:16, 2:16, 3:16, 4:20, 5:20},  # 1,5mm^2: se queda en 16mm salvo con 4 o 5 conductores
         2.5: {1:16, 2:16, 3:20, 4:20, 5:20},  # 2,5mm^2: la sección típica de enchufes
-        4.0: {1:16, 2:16, 3:20, 4:20, 5:25},   # según Tabla N°4.17 RIC (2 cond. = 16mm)
+        4.0: {1:16, 2:16, 3:20, 4:20, 5:25},   # según Tabla N°4.17 RIC N°4 (2 cond. = 16mm)
         6.0: {1:16, 2:20, 3:20, 4:25, 5:25},  # 6mm^2: con 4 o 5 conductores ya pide 25mm
         10.0:{1:16, 2:20, 3:25, 4:32, 5:32},  # 10mm^2: sube a 32mm
         16.0:{1:20, 2:25, 3:32, 4:40, 5:40},  # 16mm^2: la sección más gruesa que trae la tabla
-        # si después necesitas más secciones, las agregamos
+        # si a futuro se necesitan más secciones, se agregan
     }
 
     # elegir la sección "igual o superior" disponible en tabla
