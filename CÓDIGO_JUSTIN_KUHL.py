@@ -2050,10 +2050,6 @@ def build_materiales_df(circuitos_df, texto_omni, ambientes_df, group_info, tipo
     # ==========================================================
     # CONTEOS POR CIRCUITO PARA "Salida de caja conduit" (canalización embutida)
     #
-    # Estas reglas eran la idea original. El conteo que de verdad corre está
-    # más abajo, en el bloque "Salida de caja conduit: reglas por circuito",
-    # y quedó bastante más fino que esta nota. Lo que hace hoy el código:
-    #
     #  - Abrazaderas: NO es 1 por metro. La separación sale de la Tabla N°4.24
     #    del RIC N°4 (tuberías no metálicas): cada 1,20 m si el conduit es de
     #    16 a 25 mm, y cada 1,50 m de 32 mm para arriba. Además se calcula
@@ -2071,12 +2067,7 @@ def build_materiales_df(circuitos_df, texto_omni, ambientes_df, group_info, tipo
     #        adicional entre ambientes.
     #      * Cajas de paso: 2 cada una (entrada y salida).
     #
-    # IMPORTANTÍSIMO (esto sí sigue vigente):
-    #  - No se inventan uniones en circuitos de enchufes: si el usuario no pidió
-    #    cajas adicionales, son 0.
-    #  - Las uniones sólo se modelan en iluminación, con las cajas troncales.
     # ==========================================================
-    # =========================
     # 1) CANALIZACIONES (UNA FILA POR CIRCUITO, NO AGRUPADO)
     #    accesorios embutida (abrazaderas + salidas de caja)
     #    accesorios sobrepuesta (canaleta PVC, medida variable según sección)
